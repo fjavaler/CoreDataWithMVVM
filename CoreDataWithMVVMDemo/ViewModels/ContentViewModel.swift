@@ -25,7 +25,7 @@ class ContentViewModel: ObservableObject {
     fetchFruits()
   }
   
-  // MARK: Functions
+  // MARK: CRUD Operations
   func fetchFruits() {
     let request = NSFetchRequest<FruitEntity>(entityName: "FruitEntity")
     
@@ -36,7 +36,6 @@ class ContentViewModel: ObservableObject {
     }
   }
   
-  // MARK: CRUD Operations
   func addFruit(text: String) {
     let newFruit = FruitEntity(context: container.viewContext)
     newFruit.name = text
